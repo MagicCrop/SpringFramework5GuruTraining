@@ -38,8 +38,8 @@ public class DevBootstrap implements ApplicationListener<ContextRefreshedEvent> 
         Book ddd = new Book("Domain Driven Design", "1234", publisher);
         Book dd5e = new Book("D&D5e", "12340", publisher);
         eric.getBooks().add(ddd);
-        eric.getBooks().add(dd5e);
         ddd.getAuthors().add(eric);
+        eric.getBooks().add(dd5e);
         dd5e.getAuthors().add(eric);
         
         authorRepository.save(eric);
